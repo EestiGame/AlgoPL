@@ -1,0 +1,127 @@
+global a
+global b
+global c
+global d
+a=0
+b=0
+c=0
+d=0
+
+def aid():
+    aidtext = 'inc() to +1, dec() to -1, ret() to show, mer() to add and deposit, inp() to request input'
+    print(aidtext)
+
+def inc(var):
+    """
+    Make sure to include the apostrophes!
+    """
+    global a
+    global b
+    global c
+    global d
+    if var == 'a':
+        a=a+1
+    elif var == 'b':
+        b=b+1
+    elif var == 'c':
+        c=c+1
+    elif var == 'd':
+        d=d+1  
+
+def dec(var):
+    """
+    Make sure to include the apostrophes!
+    """
+    global a
+    global b
+    global c
+    global d
+    if var == 'a':
+        a=a-1
+    elif var == 'b':
+        b=b-1
+    elif var == 'c':
+        c=c-1
+    elif var == 'd':
+        d=d-1
+
+def ret(var, *args):
+    print(var, *args)
+
+def mer(var, var2):
+    """
+    Make sure to include the apostrophes!
+    """
+    global a
+    global b
+    global c
+    global d
+    if var == 'a':
+        if var2 == 'b':
+            num = a + b
+            a = num
+            b = 0
+        elif var2 == 'c':
+            num = a + c
+            a = num
+            c = 0
+        elif var2 == 'd':
+            num = a + d
+            a = num
+            d = 0
+    elif var == 'b':
+        if var2 == 'a':
+            num = a + b
+            b = num
+            a = 0
+        elif var2 == 'c':
+            num = b + c
+            b = num
+            c = 0
+        elif var2 == 'd':
+            num = b + d
+            b = num
+            d = 0
+    elif var == 'c':
+        if var2 == 'b':
+            num = c + b
+            c = num
+            b = 0
+        elif var2 == 'c':
+            num = c + a
+            c = num
+            a = 0
+        elif var2 == 'd':
+            num = c + d
+            c = num
+            d = 0
+    elif var == 'd':
+        if var2 == 'b':
+            num = d + b
+            d = num
+            b = 0
+        elif var2 == 'c':
+            num = d + c
+            d = num
+            c = 0
+        elif var2 == 'd':
+            num = a + d
+            d = num
+            a = 0
+
+def inp(var):
+    """
+    Make sure to include the apostrophes!
+    """
+    global a
+    global b
+    global c
+    global d
+    if var == 'a':
+       a = int(input(''))
+    elif var == 'b':
+       b = int(input(''))
+    elif var == 'c':
+       c = int(input(''))
+    elif var == 'd':
+       d = int(input(''))
